@@ -21,7 +21,7 @@ body {
 }
 
 .intro__img {
-    width: 90%;
+    width: 1200px;
     height: auto;
 }
 
@@ -40,6 +40,7 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 40;
 }
 
@@ -54,7 +55,11 @@ h1, h2, h3 {
 }
 
 .section {
+    width: 100%;
     margin: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section h2 {
@@ -72,10 +77,26 @@ h1, h2, h3 {
 }
 
 .blue-section {
-    background-color: rgb(50, 58, 91);
-    padding: 50px 20px;
-    color: white;
-    position: relative;
+    background-color: rgb(50, 58, 91); /* Main background color */
+    padding: 50px 20px; /* Padding around the content */
+    color: white; /* Text color */
+    position: relative; /* Position for pseudo-elements */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures pseudo-elements don’t overflow */
+
+    textarea {
+        width: 98.8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 10px;
+        border: none;
+    }
+
 }
 
 .text-with-animation {
@@ -105,19 +126,6 @@ h1, h2, h3 {
     width: 100%;
 }
 
-
-.blue-section textarea {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-}
-
 .blue-section button {
     width: 200px;
     height: 60px;
@@ -134,8 +142,6 @@ h1, h2, h3 {
 .blue-section button:hover {
     background-color: #f0f0f0;
 }
-
-
 
 
 .two__images {
