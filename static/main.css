@@ -84,7 +84,7 @@ h1, h2, h3 {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     overflow: hidden; /* Ensures pseudo-elements don’t overflow */
-
+    width: 90%;
     textarea {
         width: 98.8%;
         display: flex;
@@ -157,6 +157,9 @@ h1, h2, h3 {
 .last__section {
     margin-top: 40px;
     display: flex;
+    img{
+        width: 90%;
+    }
 }
 
 .two__images {
@@ -168,4 +171,8 @@ h1, h2, h3 {
 
 .two__images.show {
     transform: rotateY(180deg); /* Normal position when scrolled into view */
+}
+
+@media screen and (max-width: 480px){
+
 }
