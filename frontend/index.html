@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Сайт Визитка</title>
-    <link rel="stylesheet" href="./static/main.css">
+    <link rel="stylesheet" href="staticain.css">
 </head>
 <body>
 
@@ -25,14 +26,16 @@
         <img src="static/images/secondRedact.jpg" alt="Описание сайта">
     </div>
     <!-- Синяя секция с формой -->
-
     <div class="blue-section">
         <div class="text-with-animation">
             <h3>Поделись своей идеей</h3>
             <img src="static/images/line.png" alt="Линия" class="scroll-line">
         </div>
-        <textarea placeholder="Введите свою идею..."></textarea>
-        <button>Отправить</button>
+        <!-- Форма для отправки сообщения -->
+        <form id="telegramForm">
+            <textarea id="message" placeholder="Введите свою идею..." required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
     </div>
 
     <div class="last__section">
@@ -44,7 +47,26 @@
     </div>
 </div>
 
-<script src="scripts/main.js"></script>
+<script src="static/main.js"></script>
+<script>
+    document.getElementById('telegramForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
 
+        let message = document.getElementById('message').value;
+
+
+        let response = await fetch('http://31.129.97.199:8080/send-message', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: message }),
+        });
+
+        if (!response.ok) {
+            alert("Ошибка при отправке")
+        }
+    });
+</script>
 </body>
 </html>
