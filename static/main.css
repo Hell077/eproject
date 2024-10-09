@@ -4,8 +4,8 @@
     justify-content: center;
 
     img {
-        width: 100px;
-        height: 100px;
+        width: 10rem; /* Используйте rem вместо фиксированного px */
+        height: auto; /* Автоматическая высота сохраняет пропорции */
     }
 }
 
@@ -18,15 +18,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    font-size: 1.25rem; /* Изменение на rem */
 }
 
 .intro__img {
-    width: 1200px;
+    width: 100%; /* Ширина в 100% для отзывчивости */
+    max-width: 1200px; /* Ограничение максимальной ширины */
     height: auto;
 }
 
 .girl__img {
-    width: 250px;
+    width: 200px; /* Используйте vw для адаптивной ширины */
     height: auto;
     margin-top: 130px;
     border-top-left-radius: 35%;
@@ -34,20 +40,18 @@ body {
     transition: opacity 0.5s ease;
 }
 
-
 .intro {
-    margin-top: 20px;
+    margin-top: 2rem; /* Изменение на rem */
     text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row; /* Изменение на column для мобильных */
+    align-items: center; /* Центрируем содержимое */
     z-index: 40;
 }
 
-
 .container {
     margin: 0 auto;
-    padding: 20px;
+    padding: 2rem; /* Изменение на rem */
 }
 
 h1, h2, h3 {
@@ -56,27 +60,18 @@ h1, h2, h3 {
 
 .section {
     width: 100%;
-    margin: 60px 0;
+    margin: 4rem 0; /* Изменение на rem */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .section h2 {
-    margin-bottom: 100px;
+    margin-bottom: 6rem; /* Изменение на rem */
     font-size: 2.5em;
 }
 
-.square-img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    background-color: #ddd;
-    border-radius: 30px 30px 0 0;
-    margin: 30px auto;
-}
-
-.flex{
+.flex {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -85,26 +80,22 @@ h1, h2, h3 {
 }
 
 .blue-section {
-    background-color: rgb(50, 58, 91); /* Main background color */
-    padding: 50px 20px;
-    color: white; /* Text color */
-    position: relative; /* Position for pseudo-elements */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    overflow: hidden; /* Ensures pseudo-elements don’t overflow */
+    background-color: rgb(50, 58, 91);
+    padding: 3rem 2rem; /* Изменение на rem */
+    color: white;
+    position: relative;
+    border-radius: 0.5rem; /* Изменение на rem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     width: 90%;
-    textarea {
-        width: 98.8%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        /*padding: 10px;*/
-        border: none;
-    }
+}
 
+.blue-section textarea {
+    width: 98.8%;
+    height: 10rem; /* Изменение на rem */
+    margin-bottom: 1rem; /* Изменение на rem */
+    border-radius: 0.5rem; /* Изменение на rem */
+    border: none;
 }
 
 .text-with-animation {
@@ -116,7 +107,7 @@ h1, h2, h3 {
 }
 
 .text-with-animation h3 {
-    font-size: 24px;
+    font-size: 1.5rem; /* Изменение на rem */
     color: #ffffff;
     width: fit-content;
 }
@@ -126,21 +117,16 @@ h1, h2, h3 {
     margin-right: 140px;
     border-radius: 0;
     box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
-
-.text-with-animation.in-view .underline {
-    width: 100%;
+    margin-bottom: 1rem; /* Изменение на rem */
 }
 
 .blue-section button {
-    width: 200px;
-    height: 60px;
+    width: 20rem; /* Изменение на rem */
+    height: 4rem; /* Изменение на rem */
     background-color: white;
     color: #da7500;
-    font-size: 23px;
-    border-radius: 20px;
+    font-size: 1.5rem; /* Изменение на rem */
+    border-radius: 1rem; /* Изменение на rem */
     display: block;
     margin: 0 auto;
     cursor: pointer;
@@ -151,14 +137,14 @@ h1, h2, h3 {
     background-color: #f0f0f0;
 }
 
-
 .two__images {
     display: flex;
     flex-direction: column;
 
     img {
-        width: 300px;
-        height: 300px;
+        width: 100%; /* Ширина 100% для адаптивности */
+        height: auto;
+        max-width: 300px; /* Ограничение максимальной ширины */
     }
 }
 
@@ -170,48 +156,53 @@ h1, h2, h3 {
     }
 }
 
-.two__images {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.6s ease;
-    transform: rotateY(0deg); /* Initially rotated */
+.last__img {
+    width: 90%;
 }
 
-.two__images.show {
-    transform: rotateY(180deg);
-}
-
-@media screen and (max-width: 1700px){
-    .last__section{
+@media screen and (max-width: 1700px) {
+    .last__section {
         display: flex;
         align-items: center;
         justify-content: center;
-        .last__img{
-
+        .last__img {
             width: 60%;
         }
     }
 }
 
-@media screen and (max-width: 480px){
- .last__section{
+@media screen and (max-width: 780px){
+    .girl__img {
+        width: 300px;
+        height: 100%;
+    }
+
+
+    .intro__img {
+        width: 80%; /* Ширина 100% для мобильных */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .last__section {
         display: flex;
         align-items: center;
         justify-content: center;
-        .last__img{
-
-            width: 50%;
+        .last__img {
+            width: 80%; /* Увеличьте ширину для мобильных */
         }
     }
-    .intro{
+
+    .intro {
         width: 100%;
+        flex-direction: column; /* Вертикальное выравнивание для мобильных */
     }
 
-    .girl__img{
-        width: 150px;
+    .girl__img {
+        width: 300px;
     }
 
-    .intro__img{
-        width: 800px;
+    .intro__img {
+        width: 100%; /* Ширина 100% для мобильных */
     }
 }
