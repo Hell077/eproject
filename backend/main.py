@@ -7,8 +7,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"*": "https://varya120president.ru"}})
 
-USER_ID = 1097316536
-TOKEN = "7669781141:AAEraHeG95TX62HYegPGsS8Lst7Hn1B56ak"
+USER_ID = 0000000
+TOKEN = ""
 
 @app.route('/', methods=['POST'])
 def send_message():
